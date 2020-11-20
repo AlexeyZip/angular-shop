@@ -1,3 +1,4 @@
+import { SharedModule } from './shared/shared.module';
 import { CustomMaterialModule } from './material/custom-material.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -12,7 +13,7 @@ import { TablePageComponent } from './table-page/table-page.component';
 import { HomeAppliancesPageComponent } from './home-appliances-page/home-appliances-page.component';
 import { GamesPageComponent } from './games-page/games-page.component';
 import { PhonePageComponent } from './shared/components/phone-page/phone-page.component';
-import { PhoneInfoComponent } from './shared/component/phone-info/phone-info.component';
+import { PhoneInfoComponent } from './shared/components/phone-info/phone-info.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { PhoneInfoComponent } from './shared/component/phone-info/phone-info.com
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    SharedModule,
     CustomMaterialModule,
   ],
   providers: [],

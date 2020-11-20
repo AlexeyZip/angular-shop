@@ -1,7 +1,7 @@
 form {
   border: 1px solid;
   padding: 30px;
-  max-width: 400px;
+  max-width: 500px;
   margin: 0 auto;
   border-radius: 8px;
   .card-title {
@@ -14,6 +14,11 @@ form {
   margin-bottom: 25px;
 }
 .form-btn {
+  display: flex;
+  justify-content: flex-end;
+  ::ng-deep.mat-raised-button.mat-primary.mat-button-disabled {
+    background-color: rgba(0, 0, 0, 0.12) !important;
+  }
   ::ng-deep {
     .mat-raised-button.mat-primary {
       background-color: black;

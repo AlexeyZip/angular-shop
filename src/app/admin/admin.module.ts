@@ -1,3 +1,5 @@
+import { SharedModule } from './../shared/shared.module';
+import { AuthService } from './shared/services/auth.service';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LoginPageComponent } from './login-page/login-page.component';
 import { AdminLayoutComponent } from './shared/component/admin-layout/admin-layout.component';
@@ -22,6 +24,7 @@ import { EditPageComponent } from './edit-page/edit-page.component';
     FormsModule,
     ReactiveFormsModule,
     CustomMaterialModule,
+    SharedModule,
     RouterModule.forChild([
       {
         path: '',
@@ -37,5 +40,6 @@ import { EditPageComponent } from './edit-page/edit-page.component';
     ]),
   ],
   exports: [RouterModule],
+  providers: [AuthService],
 })
 export class AdminModule {}

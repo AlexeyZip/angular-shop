@@ -1,4 +1,4 @@
-import { PhoneInfoComponent } from './shared/component/phone-info/phone-info.component';
+import { PhoneInfoComponent } from './shared/components/phone-info/phone-info.component';
 import { PhonePageComponent } from './shared/components/phone-page/phone-page.component';
 import { GamesPageComponent } from './games-page/games-page.component';
 import { HomeAppliancesPageComponent } from './home-appliances-page/home-appliances-page.component';
