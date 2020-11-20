@@ -1,0 +1,31 @@
+form {
+  border: 1px solid;
+  padding: 30px;
+  max-width: 400px;
+  margin: 0 auto;
+  border-radius: 8px;
+  .card-title {
+    margin-bottom: 20px;
+  }
+}
+
+.custom-input {
+  width: 100%;
+  margin-bottom: 25px;
+}
+.form-btn {
+  ::ng-deep {
+    .mat-raised-button.mat-primary {
+      background-color: black;
+    }
+  }
+}
+
+.wrap {
+  .error {
+    padding-top: 15px;
+    &:nth-child(2) {
+      padding-top: 0;
+    }
+  }
+}

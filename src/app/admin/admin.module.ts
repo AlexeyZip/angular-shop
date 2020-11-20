@@ -1,3 +1,4 @@
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LoginPageComponent } from './login-page/login-page.component';
 import { AdminLayoutComponent } from './shared/component/admin-layout/admin-layout.component';
 import { RouterModule } from '@angular/router';
@@ -18,6 +19,8 @@ import { EditPageComponent } from './edit-page/edit-page.component';
   ],
   imports: [
     CommonModule,
+    FormsModule,
+    ReactiveFormsModule,
     CustomMaterialModule,
     RouterModule.forChild([
       {

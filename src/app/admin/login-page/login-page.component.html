@@ -1,1 +1,32 @@
-<p>login-page works!</p>
+<form [formGroup]="form" (ngSubmit)="submit()">
+    <div class="card-title">
+        <h2>Enter to admin panel</h2>
+    </div>
+    <div class="wrap">
+        <mat-form-field appearance="outline" class="custom-input">
+            <mat-label>Email</mat-label>
+            <input matInput formControlName="email" placeholder="Ex. pat@example.com" autocomplete="email">
+            <mat-error class="error" id="invalidEmailError">
+                Please enter a valid email address
+            </mat-error>
+            <mat-error class="error" id="requiredEmailError">
+                Email is
+                <strong>required</strong>
+            </mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" class="custom-input">
+            <mat-label>Password</mat-label>
+            <input matInput formControlName="password" placeholder="Ex. pat@example.com"
+                autocomplete="current-password">
+            <mat-error class="error" id="requiredPasswordError">
+                Password is
+                <strong>required</strong>
+            </mat-error>
+        </mat-form-field>
+    </div>
+
+    <div class="form-btn">
+        <button mat-raised-button type="submit" color="primary" [disabled]="form.invalid">Login</button>
+    </div>
+</form>

@@ -1,0 +1,29 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  background-color: #000;
+  color: #ffffff;
+  align-items: center;
+  padding: 15px;
+  a {
+    color: #ffffff;
+  }
+  ul {
+    display: flex;
+    li {
+      margin-right: 15px;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+    a {
+      color: #ffffff;
+      font-size: 18px;
+    }
+  }
+}
+.container {
+  max-width: 1070px;
+  padding: 20px 0px 20px;
+  margin: 0 auto;
+}
