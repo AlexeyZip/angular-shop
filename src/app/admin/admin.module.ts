@@ -1,3 +1,4 @@
+import { AuthGuard } from './shared/services/auth.guard';
 import { SharedModule } from './../shared/shared.module';
 import { AuthService } from './shared/services/auth.service';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -32,14 +33,14 @@ import { EditPageComponent } from './edit-page/edit-page.component';
         children: [
           { path: '', redirectTo: '/admin/login', pathMatch: 'full' },
           { path: 'login', component: LoginPageComponent },
-          { path: 'create', component: CreatePageComponent },
-          { path: 'dashboard', component: DashboardPageComponent },
-          { path: 'phone/:id/edit', component: EditPageComponent },
+          {path: 'create', component: CreatePageComponent,canActivate: [AuthGuard],},
+          {path: 'dashboard',component: DashboardPageComponent,canActivate: [AuthGuard],},
+          {path: 'phone/:id/edit',component: EditPageComponent,canActivate: [AuthGuard],},
         ],
       },
     ]),
   ],
   exports: [RouterModule],
-  providers: [AuthService],
+  providers: [AuthService, AuthGuard],
 })
 export class AdminModule {}
