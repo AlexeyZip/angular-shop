@@ -9,6 +9,8 @@ import { MatListModule } from '@angular/material/list';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatIconModule } from '@angular/material/icon';
 import { LayoutModule } from '@angular/cdk/layout';
+import { QuillModule } from 'ngx-quill';
+import { MatSelectModule } from '@angular/material/select';
 // import { QuillModule } from 'ngx-quill';
 @NgModule({
   imports: [
@@ -17,11 +19,13 @@ import { LayoutModule } from '@angular/cdk/layout';
     MatInputModule,
     MatTableModule,
     FormsModule,
+    MatSelectModule,
     ReactiveFormsModule,
     // QuillModule.forRoot(),
     MatSidenavModule,
     MatListModule,
     MatExpansionModule,
+    QuillModule.forRoot(),
     MatIconModule,
     LayoutModule,
   ],
@@ -29,7 +33,9 @@ import { LayoutModule } from '@angular/cdk/layout';
     MatButtonModule,
     MatBadgeModule,
     MatBadgeModule,
+    MatSelectModule,
     MatInputModule,
+    QuillModule,
     FormsModule,
     ReactiveFormsModule,
     // QuillModule,

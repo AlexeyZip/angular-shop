@@ -1,6 +1,8 @@
 @import "./scss/base/base";
 @import "./scss/base/normalize";
 @import "./scss/card";
+@import "~quill/dist/quill.core.css";
+@import "~quill/dist/quill.snow.css";
 
 html,
 body {

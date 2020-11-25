@@ -1,1 +1,50 @@
-<p>create-page works!</p>
+<form [formGroup]="form" (ngSubmit)="submit()">
+    <div class="title">
+        <h3 class="title">Создание продукта</h3>
+    </div>
+
+    <div class="wrap">
+        <mat-form-field appearance="outline" class="custom-input">
+            <mat-label>Choose an option</mat-label>
+            <mat-select formControlName="type">
+                <mat-option value="Смартфоны">Смартфоны</mat-option>
+                <mat-option value="Ноутбуки">Ноутбуки</mat-option>
+                <mat-option value="Игры">Игры</mat-option>
+            </mat-select>
+        </mat-form-field>
+        <mat-form-field appearance="outline" class="custom-input">
+            <mat-label for="name">Название продукта</mat-label>
+            <input matInput formControlName="name" id="name" placeholder="Название продукта" autocomplete="name">
+            <mat-error class="error" id="requiredEmailError" *ngIf="form.controls['name'].hasError('required')">
+                Please enter a valid email address
+            </mat-error>
+        </mat-form-field>
+        <div class="photo-product item">
+            <label for="">Фото продукта</label>
+            <quill-editor formControlName="photo"></quill-editor>
+        </div>
+        <div class="product-description item">
+            <label for="">Описание продукта</label>
+            <quill-editor formControlName="description"></quill-editor>
+        </div>
+        <mat-form-field appearance="outline" class="custom-input">
+            <mat-label for="price">Цена продукта</mat-label>
+            <input matInput formControlName="price" id="price" placeholder="Название продукта" autocomplete="price">
+            <mat-error class="error" id="requiredEmailError" *ngIf="form.controls['price'].hasError('required')">
+                Please enter a valid email address
+            </mat-error>
+        </mat-form-field>
+        <div class="form-btn">
+            <button mat-raised-button type="submit" color="primary" [disabled]="form.invalid">Создать
+                продукт</button>
+        </div>
+        <!-- <mat-form-field appearance="outline" class="custom-input">
+            <mat-label for="name">Название продукта</mat-label>
+            <input matInput formControlName="name" id="name" placeholder="Название продукта" autocomplete="name">
+            <mat-error class="error" id="requiredEmailError" *ngIf="form.controls['title'].hasError('required')">
+                Please enter a valid email address
+            </mat-error>
+        </mat-form-field> -->
+    </div>
+
+</form>
