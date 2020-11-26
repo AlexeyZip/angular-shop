@@ -1,7 +1,9 @@
+import { AuthInterceptor } from './shared/auth.interceptor';
+import { AuthService } from './admin/shared/services/auth.service';
 import { SharedModule } from './shared/shared.module';
 import { CustomMaterialModule } from './material/custom-material.module';
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, Provider } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -14,6 +16,14 @@ import { HomeAppliancesPageComponent } from './home-appliances-page/home-applian
 import { GamesPageComponent } from './games-page/games-page.component';
 import { PhonePageComponent } from './shared/components/phone-page/phone-page.component';
 import { PhoneInfoComponent } from './shared/components/phone-info/phone-info.component';
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
+
+
+const INTERCEPTOR_PROVIDER: Provider = {
+  provide: HTTP_INTERCEPTORS,
+  multi: true,
+  useClass: AuthInterceptor
+}
 
 @NgModule({
   declarations: [
@@ -34,7 +44,7 @@ import { PhoneInfoComponent } from './shared/components/phone-info/phone-info.co
     SharedModule,
     CustomMaterialModule,
   ],
-  providers: [],
+  providers: [INTERCEPTOR_PROVIDER],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

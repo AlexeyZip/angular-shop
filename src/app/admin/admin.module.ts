@@ -41,6 +41,6 @@ import { EditPageComponent } from './edit-page/edit-page.component';
     ]),
   ],
   exports: [RouterModule],
-  providers: [AuthService, AuthGuard],
+  providers: [ AuthGuard],
 })
 export class AdminModule {}
