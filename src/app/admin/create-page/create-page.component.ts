@@ -1,3 +1,4 @@
+import { ProductService } from './../../shared/peoduct.service';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { Component, OnInit } from '@angular/core';
 import { Product } from 'src/app/shared/interfaces';
@@ -9,7 +10,7 @@ import { Product } from 'src/app/shared/interfaces';
 })
 export class CreatePageComponent implements OnInit {
   form: FormGroup;
-  constructor() { }
+  constructor(private productService: ProductService) { }
 
   ngOnInit(): void {
     this.form = new FormGroup({
@@ -32,6 +33,11 @@ export class CreatePageComponent implements OnInit {
       photo: this.form.value.photo,
       price: this.form.value.price,
     }
+
+    this.productService.create(product).subscribe(() => {
+      this.form.reset()
+    })
+
     console.log(product);
     
   }

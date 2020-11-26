@@ -17,3 +17,7 @@ export interface Product {
   photo: string;
   price: string;
 }
+
+export interface FbCreateResponse {
+  name: string
+}
