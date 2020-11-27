@@ -36,6 +36,8 @@ import { EditPageComponent } from './edit-page/edit-page.component';
           {path: 'create', component: CreatePageComponent,canActivate: [AuthGuard],},
           {path: 'dashboard',component: DashboardPageComponent,canActivate: [AuthGuard],},
           {path: 'phone/:id/edit',component: EditPageComponent,canActivate: [AuthGuard],},
+          // {path: 'phone/:id/edit',component: EditPageComponent,canActivate: [AuthGuard],},
+          // {path: 'phone/:id/edit',component: EditPageComponent,canActivate: [AuthGuard],},
         ],
       },
     ]),

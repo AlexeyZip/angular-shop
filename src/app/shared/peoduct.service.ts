@@ -15,8 +15,22 @@ export class ProductService {
         .pipe(map((response: FbCreateResponse) => {
             return {
               ...product,
-              id: response.name  
+              id: response.name,
+              date: new Date(product.date)  
             }
+        }))
+    }
+
+    getAll(): Observable<Product[]> {
+        return this.http.get(`${environment.fbDbUrl}/products.json`)
+        .pipe(map((response: {[key: string]: any}) => {
+            return Object
+            .keys(response)
+            .map(key => ({
+                ...response[key],
+                id: key,
+                date: new Date(response[key].date),
+            }))
         }))
     }
     

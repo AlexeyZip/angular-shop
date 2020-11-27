@@ -1,0 +1,52 @@
+.form-btn {
+    display: flex;
+    justify-content: center;
+    button {
+        margin-right: 15px;
+        color: #000000;
+        &:last-child {
+            margin-right: 0;
+            color: red;
+        }
+
+    }
+}
+.custom-input {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+table {
+    border-spacing: 0;
+    width: 100%;
+    td {
+        text-align: center;
+        padding-top: 20px;
+    }
+    thead {
+        background-color: #ededed;
+    }
+    th {
+        padding: 15px;
+    }
+    p {
+        white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    max-width: 290px;
+    }
+}
+
+.photo {
+    p { 
+        img {
+            width: 100px !important;
+        }
+    }
+    
+}
+
+.descr {
+    max-height: 100px;
+    overflow-y: scroll;
+}

@@ -16,6 +16,7 @@ export interface Product {
   description: string;
   photo: string;
   price: string;
+  date: Date;
 }
 
 export interface FbCreateResponse {

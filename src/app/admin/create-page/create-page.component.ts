@@ -32,6 +32,7 @@ export class CreatePageComponent implements OnInit {
       description: this.form.value.description,
       photo: this.form.value.photo,
       price: this.form.value.price,
+      date: new Date(),
     }
 
     this.productService.create(product).subscribe(() => {
@@ -41,5 +42,6 @@ export class CreatePageComponent implements OnInit {
     console.log(product);
     
   }
+
 
 }
