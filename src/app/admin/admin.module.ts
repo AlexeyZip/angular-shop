@@ -1,6 +1,6 @@
+import { SearchPipe } from './shared/search.pipe';
 import { AuthGuard } from './shared/services/auth.guard';
 import { SharedModule } from './../shared/shared.module';
-import { AuthService } from './shared/services/auth.service';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LoginPageComponent } from './login-page/login-page.component';
 import { AdminLayoutComponent } from './shared/component/admin-layout/admin-layout.component';
@@ -19,6 +19,7 @@ import { EditPageComponent } from './edit-page/edit-page.component';
     CreatePageComponent,
     EditPageComponent,
     LoginPageComponent,
+    SearchPipe,
   ],
   imports: [
     CommonModule,

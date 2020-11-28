@@ -1,5 +1,4 @@
 import { ProductService } from './../../shared/peoduct.service';
-import { AuthService } from './../shared/services/auth.service';
 import { Component, OnDestroy, OnInit, ViewEncapsulation } from '@angular/core';
 import { Product } from 'src/app/shared/interfaces';
 import { Subscription } from 'rxjs';
@@ -12,8 +11,9 @@ import { Subscription } from 'rxjs';
 })
 export class DashboardPageComponent implements OnInit, OnDestroy {
 
-  products: Product[] = []
-  pSub: Subscription 
+  products: Product[] = [];
+  pSub: Subscription;
+  searchStr = '';
 
   constructor(private productService: ProductService) {}
 

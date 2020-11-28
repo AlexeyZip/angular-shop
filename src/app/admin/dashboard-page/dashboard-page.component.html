@@ -1,9 +1,14 @@
-<mat-form-field appearance="outline" class="custom-input">
-    <mat-label>Найти</mat-label>
-    <input matInput placeholder="Найти">
-
-</mat-form-field>
 <div class="" *ngIf="products.length; else loading">
+    <form>
+        <mat-form-field appearance="outline" class="custom-input">
+            <mat-label>Найти</mat-label>
+            <input matInput placeholder="Найти..." [(ngModel)]="searchStr" name="searchStr">
+
+        </mat-form-field>
+    </form>
+
+
+    <!-- <input type="text" placeholder="Find task" [(ngModel)]="searchStr"> -->
     <table>
         <thead>
             <tr>
@@ -18,7 +23,7 @@
             </tr>
         </thead>
         <tbody>
-            <tr *ngFor="let product of products; let idx = index">
+            <tr *ngFor="let product of products | searchProducts: searchStr; let idx = index">
                 <td>{{idx + 1}}</td>
                 <td>{{product.type}}</td>
                 <td>{{product.name}}</td>
@@ -33,7 +38,8 @@
                         ]">Открыть</button>
 
 
-                        <button mat-button color="primary"><a (click)="remove(product.id)">Удалить</a>
+                        <button mat-button color="primary" class="remove-btn"><a
+                                (click)="remove(product.id)">Удалить</a>
                         </button></div>
 
 
