@@ -13,6 +13,7 @@ export class DashboardPageComponent implements OnInit, OnDestroy {
 
   products: Product[] = [];
   pSub: Subscription;
+  dSub: Subscription;
   searchStr = '';
 
   constructor(private productService: ProductService) {}
@@ -24,12 +25,18 @@ export class DashboardPageComponent implements OnInit, OnDestroy {
   }
 
   remove(id: string) {
-
+    this.dSub = this.productService.remove(id).subscribe(() => {
+      this.products = this.products.filter(product => product.id !== id)
+    })
   }
 
   ngOnDestroy(): void {
     if(this.pSub) {
       this.pSub.unsubscribe()
+    }
+
+    if(this.dSub) {
+      this.dSub.unsubscribe()
     }
   }
 }
