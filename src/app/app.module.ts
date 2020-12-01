@@ -1,5 +1,5 @@
 import { AuthInterceptor } from './shared/auth.interceptor';
-import { AuthService } from './admin/shared/services/auth.service';
+// import { AuthService } from './admin/shared/services/auth.service';
 import { SharedModule } from './shared/shared.module';
 import { CustomMaterialModule } from './material/custom-material.module';
 import { BrowserModule } from '@angular/platform-browser';
@@ -17,7 +17,11 @@ import { GamesPageComponent } from './games-page/games-page.component';
 import { PhonePageComponent } from './shared/components/phone-page/phone-page.component';
 import { PhoneInfoComponent } from './shared/components/phone-info/phone-info.component';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import ruLocale from '@angular/common/locales/ru';
+import { registerLocaleData } from '@angular/common';
 
+
+registerLocaleData(ruLocale, 'ru')
 
 const INTERCEPTOR_PROVIDER: Provider = {
   provide: HTTP_INTERCEPTORS,

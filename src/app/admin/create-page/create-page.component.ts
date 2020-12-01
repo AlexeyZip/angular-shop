@@ -1,3 +1,4 @@
+import { AlertService } from './../shared/services/alert.services';
 import { ProductService } from './../../shared/peoduct.service';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { Component, OnInit } from '@angular/core';
@@ -10,7 +11,7 @@ import { Product } from 'src/app/shared/interfaces';
 })
 export class CreatePageComponent implements OnInit {
   form: FormGroup;
-  constructor(private productService: ProductService) { }
+  constructor(private productService: ProductService, private alert: AlertService) { }
 
   ngOnInit(): void {
     this.form = new FormGroup({
@@ -37,6 +38,7 @@ export class CreatePageComponent implements OnInit {
 
     this.productService.create(product).subscribe(() => {
       this.form.reset()
+      this.alert.success('Продукт был добавлен')
     })
 
     console.log(product);

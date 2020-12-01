@@ -1,0 +1,36 @@
+.wrap {
+    border: 1px solid #edededed;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 8px;
+    .error {
+        padding-top: 15px;
+        &:nth-child(2) {
+          padding-top: 0;
+        }
+      }
+}
+.custom-input {
+    width: 100%;
+    margin-bottom: 15px;
+}
+.title {
+    margin-bottom: 30px;
+}
+.item {
+    margin-bottom: 20px;
+}
+
+.form-btn {
+    display: flex;
+    justify-content: flex-end;
+    ::ng-deep.mat-raised-button.mat-primary.mat-button-disabled {
+      background-color: rgba(0, 0, 0, 0.12) !important;
+    }
+    ::ng-deep {
+      .mat-raised-button.mat-primary {
+        background-color: black;
+      }
+    }
+  }
