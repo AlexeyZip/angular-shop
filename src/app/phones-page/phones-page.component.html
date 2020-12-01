@@ -1,29 +1,8 @@
-<div class="card-wrap">
-    <app-phone-page></app-phone-page>
-    <app-phone-page></app-phone-page>
-    <app-phone-page></app-phone-page>
-    <app-phone-page></app-phone-page>
-    <app-phone-page></app-phone-page>
-    <app-phone-page></app-phone-page>
-    <app-phone-page></app-phone-page>
-    <app-phone-page></app-phone-page>
-    <app-phone-page></app-phone-page>
-    <app-phone-page></app-phone-page>
-    <app-phone-page></app-phone-page>
-    <app-phone-page></app-phone-page>
-    <app-phone-page></app-phone-page>
-    <app-phone-page></app-phone-page>
-    <app-phone-page></app-phone-page>
-    <app-phone-page></app-phone-page>
-    <app-phone-page></app-phone-page>
-    <app-phone-page></app-phone-page>
-    <app-phone-page></app-phone-page>
-    <app-phone-page></app-phone-page>
-    <app-phone-page></app-phone-page>
-    <app-phone-page></app-phone-page>
-    <app-phone-page></app-phone-page>
-    <app-phone-page></app-phone-page>
-    <app-phone-page></app-phone-page>
-    <app-phone-page></app-phone-page>
-    <app-phone-page></app-phone-page>
+<div class="card-wrap" *ngIf="products$ | async as products; else loading">
+    <app-phone-page *ngFor="let product of products" [product]="product"></app-phone-page>
+
 </div>
+
+<ng-template #loading>
+    <p>Загрузка</p>
+</ng-template>

@@ -9,3 +9,11 @@
   justify-content: space-between;
 }
 
+.description {
+  max-height: 40px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  margin: 10px 0px 20px;
+}
+

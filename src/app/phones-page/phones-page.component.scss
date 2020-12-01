@@ -3,5 +3,8 @@
   grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
   grid-gap: 20px;
   height: calc(100vh - 85px);
-  overflow: scroll;
+  overflow: auto;
+  // display: flex;
+  //   flex-wrap: wrap;
+  //   justify-content: space-around;
 }
