@@ -8,3 +8,11 @@
   margin-right: 5px;
   margin-bottom: 5px;
 }
+
+.card-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  max-width: 820px;
+  margin: 0 auto;
+}

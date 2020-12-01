@@ -12,7 +12,7 @@ export class PhonesPageComponent implements OnInit {
 
   products$: Observable<Product[]>
 
-  constructor(private productService: ProductService) { }
+  constructor(public productService: ProductService) { }
 
   ngOnInit() {
     this.products$ = this.productService.getAll()

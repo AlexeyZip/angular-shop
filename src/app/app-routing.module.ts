@@ -1,3 +1,4 @@
+import { CartPageComponent } from './cart-page/cart-page.component';
 import { PhoneInfoComponent } from './shared/components/phone-info/phone-info.component';
 import { PhonePageComponent } from './shared/components/phone-page/phone-page.component';
 import { GamesPageComponent } from './games-page/games-page.component';
@@ -22,6 +23,8 @@ const routes: Routes = [
       { path: 'game', component: GamesPageComponent },
       { path: 'phone', component: PhonePageComponent },
       { path: 'phones/phone-info', component: PhoneInfoComponent },
+      { path: 'laptop/phone-info', component: PhoneInfoComponent },
+      { path: 'cart', component: CartPageComponent },
     ],
   },
   {

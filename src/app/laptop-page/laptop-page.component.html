@@ -1,1 +1,9 @@
-<p>laptop-page works!</p>
+<div class="card-wrap" *ngIf="products$ | async as products; else loading">
+    <app-phone-page *ngFor="let product of products | sorting: productService.type" [product]="product">
+    </app-phone-page>
+
+</div>
+
+<ng-template #loading>
+    <p>Загрузка</p>
+</ng-template>

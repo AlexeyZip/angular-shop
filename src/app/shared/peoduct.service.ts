@@ -9,6 +9,9 @@ import { map } from 'rxjs/internal/operators';
 @Injectable ({providedIn: 'root'}) 
 
 export class ProductService {
+
+    type
+
     constructor(private http: HttpClient) {}
 
     create(product: Product): Observable<Product> {
@@ -53,7 +56,9 @@ export class ProductService {
     update(product: Product): Observable<Product> {
         return this.http.patch<Product>(`${environment.fbDbUrl}/products/${product.id}.json`, product)
     }
-    
+    setType(type) {
+        this.type = type
+    }
 }
 
 

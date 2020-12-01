@@ -1,3 +1,4 @@
+import { SortingPipe } from './shared/sorting.pipe';
 import { AuthInterceptor } from './shared/auth.interceptor';
 // import { AuthService } from './admin/shared/services/auth.service';
 import { SharedModule } from './shared/shared.module';
@@ -19,6 +20,7 @@ import { PhoneInfoComponent } from './shared/components/phone-info/phone-info.co
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import ruLocale from '@angular/common/locales/ru';
 import { registerLocaleData } from '@angular/common';
+import { CartPageComponent } from './cart-page/cart-page.component';
 
 
 registerLocaleData(ruLocale, 'ru')
@@ -39,7 +41,9 @@ const INTERCEPTOR_PROVIDER: Provider = {
     HomeAppliancesPageComponent,
     GamesPageComponent,
     PhonePageComponent,
+    SortingPipe,
     PhoneInfoComponent,
+    CartPageComponent,
   ],
   imports: [
     BrowserModule,
