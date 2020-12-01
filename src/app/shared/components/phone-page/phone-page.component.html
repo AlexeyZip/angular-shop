@@ -29,8 +29,12 @@
         </div> -->
         <!-- {{product.description}} -->
     </div>
+    <div class="product-price" [innerHTML]="product.price"></div>
     <div class="button-form">
-        <button>buy</button>
-        <button [routerLink]="['phone-info']">open</button>
+        <button mat-raised-button type="submit" class="buy" color="primary">Купить</button>
+        <button mat-raised-button type="submit" class="open" color="primary"
+            [routerLink]="['product-info']">Открыть</button>
+        <!-- <button>buy</button>
+        <button [routerLink]="['product-info']">open</button> -->
     </div>
 </div>

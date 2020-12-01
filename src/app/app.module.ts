@@ -13,7 +13,6 @@ import { MainLayoutComponent } from './shared/components/main-layout/main-layout
 import { PhonesPageComponent } from './phones-page/phones-page.component';
 import { LaptopPageComponent } from './laptop-page/laptop-page.component';
 import { TablePageComponent } from './table-page/table-page.component';
-import { HomeAppliancesPageComponent } from './home-appliances-page/home-appliances-page.component';
 import { GamesPageComponent } from './games-page/games-page.component';
 import { PhonePageComponent } from './shared/components/phone-page/phone-page.component';
 import { PhoneInfoComponent } from './shared/components/phone-info/phone-info.component';
@@ -21,6 +20,7 @@ import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import ruLocale from '@angular/common/locales/ru';
 import { registerLocaleData } from '@angular/common';
 import { CartPageComponent } from './cart-page/cart-page.component';
+import { HomeAppliancesComponent } from './home-appliances/home-appliances.component';
 
 
 registerLocaleData(ruLocale, 'ru')
@@ -38,12 +38,13 @@ const INTERCEPTOR_PROVIDER: Provider = {
     PhonesPageComponent,
     LaptopPageComponent,
     TablePageComponent,
-    HomeAppliancesPageComponent,
+    HomeAppliancesComponent,
     GamesPageComponent,
     PhonePageComponent,
     SortingPipe,
     PhoneInfoComponent,
     CartPageComponent,
+    HomeAppliancesComponent,
   ],
   imports: [
     BrowserModule,

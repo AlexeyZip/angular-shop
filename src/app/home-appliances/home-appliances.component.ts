@@ -4,11 +4,11 @@ import { Product } from '../shared/interfaces';
 import { ProductService } from '../shared/peoduct.service';
 
 @Component({
-  selector: 'app-table-page',
-  templateUrl: './table-page.component.html',
-  styleUrls: ['./table-page.component.scss']
+  selector: 'app-home-appliances',
+  templateUrl: './home-appliances.component.html',
+  styleUrls: ['./home-appliances.component.scss']
 })
-export class TablePageComponent implements OnInit {
+export class HomeAppliancesComponent implements OnInit {
 
   products$: Observable<Product[]>
 
@@ -17,5 +17,4 @@ export class TablePageComponent implements OnInit {
   ngOnInit() {
     this.products$ = this.productService.getAll()
   }
-
 }

@@ -5,10 +5,11 @@
     <div class="menu">
         <ul>
             <li routerLinkActive="active"><a [routerLink]="['phones']" (click)="setType('Phone')">Смартфоны</a></li>
-            <li routerLinkActive="active"><a [routerLink]="['tablet']">Планшеты</a></li>
+            <li routerLinkActive="active"><a [routerLink]="['tablet']" (click)="setType('Tablet')">Планшеты</a></li>
             <li routerLinkActive="active"><a [routerLink]="['laptop']" (click)="setType('Laptop')">Ноутбуки</a></li>
-            <li routerLinkActive="active"><a [routerLink]="['home-appliance']">Домашняя техника</a></li>
-            <li routerLinkActive="active"><a [routerLink]="['game']">Игры</a></li>
+            <li routerLinkActive="active"><a [routerLink]="['home-appliance']"
+                    (click)="setType('Home-appliances')">Домашняя техника</a></li>
+            <li routerLinkActive="active"><a [routerLink]="['game']" (click)="setType('Games')">Игры</a></li>
             <li routerLinkActive="active"><a [routerLink]="['cart']" (click)="setType('Cart')">Корзина</a></li>
         </ul>
     </div>
