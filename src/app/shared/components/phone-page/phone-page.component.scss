@@ -7,12 +7,29 @@
 .button-form {
   display: flex;
   justify-content: space-between;
+ 
+  .open {
+      &.mat-raised-button.mat-primary {
+        background-color: black;
+        padding: 0;
+        line-height: 20px;
+      }
+    
+  }
+  .buy {
+      &.mat-raised-button.mat-primary {
+        background-color: rgb(20, 212, 30);
+        padding: 0;
+        line-height: 20px;
+      }
+   
+  }
+  
 }
 
 .description {
   max-height: 40px;
   overflow: hidden;
-  white-space: nowrap;
   text-overflow: ellipsis;
   margin: 10px 0px 20px;
 }
