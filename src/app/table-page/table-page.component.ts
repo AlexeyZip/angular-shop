@@ -9,7 +9,7 @@ import { ProductService } from '../shared/peoduct.service';
   styleUrls: ['./table-page.component.scss']
 })
 export class TablePageComponent implements OnInit {
-
+  
   products$: Observable<Product[]>
 
   constructor(public productService: ProductService) { }
@@ -17,5 +17,6 @@ export class TablePageComponent implements OnInit {
   ngOnInit() {
     this.products$ = this.productService.getAll()
   }
+
 
 }

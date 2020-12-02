@@ -1,5 +1,5 @@
 import { ProductService } from './../../peoduct.service';
-import { Router } from '@angular/router';
+import { Router, RouterLinkActive } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -8,21 +8,28 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./main-layout.component.scss'],
 })
 export class MainLayoutComponent implements OnInit {
-  type = 'Phone'
-  
-  constructor(private router: Router, private productService: ProductService) {}
+  type = ''
 
-  ngOnInit() {}
+  constructor(public router: Router, private productService: ProductService) {}
+
+  ngOnInit() {
+    if (this.type = 'Phone') {
+      this.router.navigate(['phones'])
+    }
+  }
 
   setType(type) {
     this.type = type
-    if(this.type !=='Cart') {
-      // this.router.navigate([''], {
-      //   queryParams: {
-      //     type: this.type
-      //   }
-      // })
-      this.productService.setType(this.type)
-    }
+    // if(this.type !=='Cart') {
+    //   this.router.navigate([''], {
+      
+    //   })
+    //   this.productService.setType(this.type)
+    // }
+    // if (this.type == 'Phone') {
+    //    this.router.navigate(['phones'], )
+    //   this.productService.setType('Phone')
+    // }
+    this.productService.setType(this.type)
   }
 }

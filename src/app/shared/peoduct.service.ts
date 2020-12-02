@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { Product } from 'src/app/shared/interfaces';
 import { environment } from './../../environments/environment';
 import { Observable } from 'rxjs';
@@ -10,9 +11,9 @@ import { map } from 'rxjs/internal/operators';
 
 export class ProductService {
 
-    type
+    type = 'Phone'
 
-    constructor(private http: HttpClient) {}
+    constructor(private http: HttpClient, public router: Router) {}
 
     create(product: Product): Observable<Product> {
         return this.http.post<Product>(`${environment.fbDbUrl}/products.json`, product)
