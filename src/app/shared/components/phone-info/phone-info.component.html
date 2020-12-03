@@ -1,14 +1,14 @@
-<div class="card-info">
-    <div class="title">
-        Samsung Galaxy Note 10 Lite 6/128GB Silver
+<div class="card-info" *ngIf="product$ | async as product; else loading">
+    <div class="title" [innerHTML]="product.name">
+
     </div>
     <div class="phone-info">
-        <div class="photo-phone-info">
-            <img src="https://i.allo.ua/media/catalog/product/cache/1/image/425x295/602f0fa2c1f0d1ba5e241f914e856ff9/g/a/galaxynote10lite_front_pen_auraglowf.jpg"
-                alt="">
+        <div class="photo-phone-info" [innerHTML]="product.photo">
+
         </div>
         <div class="description-info">
-            <div class="display">
+            <quill-view-html [content]="product.description"></quill-view-html>
+            <!-- <div class="display">
                 Дисплей <span>6</span>
             </div>
             <div class="screen-resolution">
@@ -28,10 +28,14 @@
             </div>
             <div class="protection">
                 Стандарт защиты<span>IP68</span>
-            </div>
+            </div> -->
         </div>
     </div>
     <div class="form-btn">
         <button>Купить</button>
     </div>
 </div>
+
+<ng-template #loading>
+    <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+</ng-template>

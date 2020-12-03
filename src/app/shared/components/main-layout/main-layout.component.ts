@@ -1,3 +1,4 @@
+
 import { ProductService } from './../../peoduct.service';
 import { Router, RouterLinkActive } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
@@ -13,9 +14,7 @@ export class MainLayoutComponent implements OnInit {
   constructor(public router: Router, private productService: ProductService) {}
 
   ngOnInit() {
-    if (this.type = 'Phone') {
-      this.router.navigate(['phones'])
-    }
+  
   }
 
   setType(type) {

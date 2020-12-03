@@ -4,20 +4,36 @@
   display: flex;
   justify-content: space-between;
   a {
-    color: #ffffff;
+    color: springgreen;
     font-size: 22px;
     font-weight: 600;
+    text-shadow: 2px 2px 18px;
   }
 }
 .menu {
   padding: 10px;
   background-color: #ffffff;
+  box-shadow: 5px -1px 13px black;
   ul {
     margin-top: 10px;
   }
   li {
     margin-bottom: 20px;
     display: flex;
+    border-radius: 50px;
+    position: relative;
+    &:after {
+      content: "";
+      width: 12px;
+      height: 12px;
+      background-color: #064006;
+      position: absolute;
+      border-radius: 50%;
+      right: 18px;
+      border: 1px solid #0000;
+      top: 14px;
+      box-shadow: 2px 2px 2px;
+    }
     &:last-child {
       margin-bottom: 0;
     }
@@ -26,35 +42,65 @@
       text-decoration: none;
       color: #000000;
       font-size: 18px;
-      border: 1px solid #575656;
       padding: 10px;
       width: 100%;
-      border-radius: 5px;
       &:hover {
-        background-color: rgba(0, 0, 0, 0.199);
+        border-radius: 50px;
+        box-shadow: 0 0 10px;
+       
+       
       }
     }
   }
 }
 .content-wrap {
   display: flex;
-  background-color: #949494;
   .menu {
-    width: 20%;
+    width: 25%;
     height: 100vh;
   }
 }
 .container {
-  max-width: 1000px;
-  padding: 0px 15px 0px 15px;
-  margin: 0 auto;
-  background-color: #949494;
+  // max-width: 1000px;
+  // padding: 0px 15px 0px 15px;
+  // margin: 0 auto;
   width: 100%;
 }
 
 .active {
-  background-color: springgreen;
+  // background-color: springgreen;
+  box-shadow: inset 0 0 10px;
+  transition: all .5s;
+  &:hover {
+    box-shadow: none;
+  }
+  &:before {
+    content: "";
+    width: 12px;
+    z-index: 4;
+    height: 12px;
+    background-color: #0afd0a;
+    position: absolute;
+    border-radius: 50%;
+    right: 18px;
+    border: 1px solid #0000;
+    top: 14px;
+    box-shadow: 0 0 10px 0px #0afd0a;
+  }
+  .light {
+    opacity: 1;
+  }
+ 
 }
-.wrap {
-  margin-top: 20px;
+
+.light {
+  width: 30px;
+  height: 30px;
+  background-color: #0afd0a;
+  position: absolute;
+  right: 6px;
+  box-shadow: 30px 5px 26px #0afd0a;
+  z-index: -1;
+  top: 4px;
+  opacity: 0;
 }

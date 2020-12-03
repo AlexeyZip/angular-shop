@@ -1,5 +1,8 @@
 .photo-phone {
-  max-width: 200px;
+      width: 140px;
+      height: 140px;
+      display: flex;
+      align-items: center;
   img {
     width: 100%;
   }

@@ -8,6 +8,7 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatIconModule } from '@angular/material/icon';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { LayoutModule } from '@angular/cdk/layout';
 import { QuillModule } from 'ngx-quill';
 import { MatSelectModule } from '@angular/material/select';
@@ -19,6 +20,7 @@ import { MatSelectModule } from '@angular/material/select';
     MatInputModule,
     MatTableModule,
     FormsModule,
+    MatProgressBarModule,
     MatSelectModule,
     ReactiveFormsModule,
     // QuillModule.forRoot(),
@@ -33,6 +35,7 @@ import { MatSelectModule } from '@angular/material/select';
     MatButtonModule,
     MatBadgeModule,
     MatBadgeModule,
+    MatProgressBarModule,
     MatSelectModule,
     MatInputModule,
     QuillModule,

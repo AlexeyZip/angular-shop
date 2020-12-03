@@ -1,16 +1,29 @@
 <div class="header">
-    <div class="logo"><a href="">Logo</a></div>
+    <div class="logo"><a href="">YourTech</a></div>
 </div>
 <div class="content-wrap">
     <div class="menu">
         <ul>
-            <li routerLinkActive="active"><a [routerLink]="['phones']" (click)="setType('Phone')">Смартфоны</a></li>
-            <li routerLinkActive="active"><a [routerLink]="['tablet']" (click)="setType('Tablet')">Планшеты</a></li>
-            <li routerLinkActive="active"><a [routerLink]="['laptop']" (click)="setType('Laptop')">Ноутбуки</a></li>
-            <li routerLinkActive="active"><a [routerLink]="['home-appliance']"
-                    (click)="setType('Home-appliances')">Домашняя техника</a></li>
-            <li routerLinkActive="active"><a [routerLink]="['game']" (click)="setType('Games')">Игры</a></li>
-            <li routerLinkActive="active"><a [routerLink]="['cart']" (click)="setType('Cart')">Корзина</a></li>
+            <li routerLinkActive="active">
+                <div class="light"></div><a [routerLink]="['phones']" (click)="setType('Phone')">Смартфоны</a>
+            </li>
+
+            <li routerLinkActive="active">
+                <div class="light"></div><a [routerLink]="['tablet']" (click)="setType('Tablet')">Планшеты</a>
+            </li>
+            <li routerLinkActive="active">
+                <div class="light"></div><a [routerLink]="['laptop']" (click)="setType('Laptop')">Ноутбуки</a>
+            </li>
+            <li routerLinkActive="active">
+                <div class="light"></div><a [routerLink]="['home-appliance']"
+                    (click)="setType('Home-appliances')">Домашняя техника</a>
+            </li>
+            <li routerLinkActive="active">
+                <div class="light"></div><a [routerLink]="['game']" (click)="setType('Games')">Игры</a>
+            </li>
+            <li routerLinkActive="active">
+                <div class="light"></div><a [routerLink]="['cart']" (click)="setType('Cart')">Корзина</a>
+            </li>
         </ul>
     </div>
     <div class="container">

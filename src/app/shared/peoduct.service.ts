@@ -11,7 +11,7 @@ import { map } from 'rxjs/internal/operators';
 
 export class ProductService {
 
-    type = 'Phone'
+    type = ''
 
     constructor(private http: HttpClient, public router: Router) {}
 
