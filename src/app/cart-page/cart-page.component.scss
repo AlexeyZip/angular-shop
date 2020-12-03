@@ -51,3 +51,47 @@ table {
 .cart-title {
     margin-bottom: 30px;
 } 
+.cart-form-wrap {
+    h2 {
+        margin-bottom: 20px;
+    }
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    width: 100%;
+    margin: 0 auto;
+    border-radius: 7px;
+    padding: 19px;
+    box-shadow: 4px 5px 12px black;
+}
+.form-btn {
+    margin-top: 20px;
+}
+.custom-input {
+    width: 100%;
+    margin-bottom: 15px;
+}
+.error {
+    padding-top: 15px;
+    &:nth-child(2) {
+      padding-top: 0;
+    }
+  }
+
+  .form-btn {
+    display: flex;
+    justify-content: flex-end;
+    .mat-raised-button.mat-primary.mat-button-disabled {
+      background-color: rgba(0, 0, 0, 0.12) !important;
+    }
+    
+      .mat-raised-button.mat-primary {
+        background-color: black;
+      }
+    
+  }
+
+  .delivery-form {
+    margin-bottom: 50px;
+  }
+  

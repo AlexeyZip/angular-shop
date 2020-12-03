@@ -16,6 +16,7 @@ export class MainLayoutComponent implements OnInit {
   ngOnInit() {
   
   }
+  
 
   setType(type) {
     this.type = type

@@ -19,6 +19,16 @@ export interface Product {
   date: Date;
 }
 
+export interface Order {
+  phone: string;
+  name: string;
+  address: string;
+  payment: string;
+  orders: any;
+  price: number;
+  date: Date;
+}
+
 export interface FbCreateResponse {
   name: string
 }

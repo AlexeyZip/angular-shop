@@ -27,7 +27,8 @@
                 <td [innerHTML]="cartProduct.photo" class="photo"></td>
                 <td>
                     <div class="form-btn">
-                        <button mat-button color="primary" class="remove-btn"><a>Удалить</a>
+                        <button mat-button color="primary" class="remove-btn"
+                            (click)="delete(cartProduct)"><a>Удалить</a>
                         </button></div>
 
 
@@ -43,7 +44,66 @@
 
 
     <div class="delivery-form">
-        <h2>Доставка:</h2>
+        <div class="cart-title">
+            <h2>Доставка:</h2>
+        </div>
+
+        <form [formGroup]="form" (ngSubmit)="submit()">
+
+
+            <div class="cart-form-wrap">
+
+                <mat-form-field appearance="outline" class="custom-input">
+                    <mat-label for="name">Имя</mat-label>
+                    <input matInput formControlName="name" id="name" placeholder="Ваше имя" autocomplete="name">
+                    <mat-error class="error" id="requiredEmailError" *ngIf="form.controls['name'].hasError('required')">
+                        Введите ваше имя
+                    </mat-error>
+                </mat-form-field>
+
+                <mat-form-field appearance="outline" class="custom-input">
+                    <mat-label for="phone">Номер телефона</mat-label>
+                    <input matInput formControlName="phone" id="phone" placeholder="Ваш номер телефона"
+                        autocomplete="phone">
+                    <mat-error class="error" id="requiredEmailError"
+                        *ngIf="form.controls['phone'].hasError('required')">
+                        Введите ваш номер телефона
+                    </mat-error>
+                </mat-form-field>
+
+                <mat-form-field appearance="outline" class="custom-input">
+                    <mat-label for="address">Адрес</mat-label>
+                    <input matInput formControlName="address" id="address" placeholder="Адрес доставки"
+                        autocomplete="address">
+                    <mat-error class="error" id="requiredEmailError"
+                        *ngIf="form.controls['address'].hasError('required')">
+                        Введите адрес доставки
+                    </mat-error>
+                </mat-form-field>
+                <mat-form-field appearance="outline" class="custom-input">
+                    <mat-label>Способ оплаты</mat-label>
+                    <mat-select formControlName="payment">
+                        <mat-option value="Cash">Наличными</mat-option>
+                        <mat-option value="Card">Картой</mat-option>
+                    </mat-select>
+                </mat-form-field>
+
+                <!-- <mat-form-field appearance="outline" class="custom-input">
+                    <mat-label for="price">Цена продукта</mat-label>
+                    <input matInput formControlName="price" id="price" placeholder="Название продукта"
+                        autocomplete="price">
+                    <mat-error class="error" id="requiredEmailError"
+                        *ngIf="form.controls['price'].hasError('required')">
+                        Please enter a valid email address
+                    </mat-error>
+                </mat-form-field> -->
+                <div class="form-btn">
+                    <button mat-raised-button type="submit" color="primary"
+                        [disabled]="form.invalid || submitted">Заказать</button>
+                </div>
+            </div>
+
+        </form>
     </div>
 </div>
 <ng-template #loading>
