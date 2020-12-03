@@ -17,6 +17,18 @@ table {
     overflow: hidden;
     max-width: 290px;
     }
+    
+}
+.cart-page {
+    display: block;
+}
+.total-price {
+    border-bottom: 1px solid  #0afd0a;
+    display: flex;
+    justify-content: flex-end;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    margin-top: 20px;
 }
 
 .photo {
@@ -36,3 +48,6 @@ table {
     text-align: center;
     padding-top: 200px;
 }
+.cart-title {
+    margin-bottom: 30px;
+} 

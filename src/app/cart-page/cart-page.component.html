@@ -1,5 +1,8 @@
-<div *ngIf="cartProducts.length > 0; else loading" class="card-wrap">
-    <h2>Ваш заказ</h2>
+<div *ngIf="cartProducts.length > 0; else loading" class="card-wrap cart-page">
+    <div class="cart-title">
+        <h2>Ваш заказ</h2>
+    </div>
+
     <table>
         <thead>
             <tr>
@@ -29,10 +32,13 @@
 
 
                 </td>
+
             </tr>
+
         </tbody>
+
+
     </table>
-    <hr>
     <b class="total-price">Всего к оплате: {{totalPrice}}$</b>
 
 
