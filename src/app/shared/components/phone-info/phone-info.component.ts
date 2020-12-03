@@ -24,4 +24,9 @@ export class PhoneInfoComponent implements OnInit {
     }))
   }
 
+  addProduct(product) {
+    this.productService.addProduct(product)
+  }
+
+
 }

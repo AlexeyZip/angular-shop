@@ -1,1 +1,46 @@
-<p>cart-page works!</p>
+<div *ngIf="cartProducts.length > 0; else loading" class="card-wrap">
+    <h2>Ваш заказ</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Тип</th>
+                <th>Название</th>
+                <th>Описание</th>
+                <th>Цена</th>
+                <th>Фото</th>
+                <th>Действие</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let cartProduct of cartProducts; let i = index">
+                <td>{{i + 1}}</td>
+                <td>{{cartProduct.type}}</td>
+                <td>{{cartProduct.name}}</td>
+                <td>
+                    <div class="descr" [innerHTML]="cartProduct.description"></div>
+                </td>
+                <td>{{cartProduct.price}}$</td>
+                <td [innerHTML]="cartProduct.photo" class="photo"></td>
+                <td>
+                    <div class="form-btn">
+                        <button mat-button color="primary" class="remove-btn"><a>Удалить</a>
+                        </button></div>
+
+
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <hr>
+    <b class="total-price">Всего к оплате: {{totalPrice}}$</b>
+
+
+    <div class="delivery-form">
+        <h2>Доставка:</h2>
+    </div>
+</div>
+<ng-template #loading>
+
+    <h2 class="text">Ваша корзина пуста, пожалуйста сделайте ваш первый заказ)</h2>
+</ng-template>

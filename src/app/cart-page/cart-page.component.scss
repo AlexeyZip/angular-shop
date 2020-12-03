@@ -1,0 +1,38 @@
+table {
+    border-spacing: 0;
+    width: 100%;
+    td {
+        text-align: center;
+        padding-top: 20px;
+    }
+    thead {
+        background-color: #ededed;
+    }
+    th {
+        padding: 15px;
+    }
+    p {
+        white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    max-width: 290px;
+    }
+}
+
+.photo {
+    p { 
+        img {
+            width: 100px !important;
+        }
+    }
+    
+}
+
+.descr {
+    max-height: 100px;
+    overflow-y: auto;
+}
+.text {
+    text-align: center;
+    padding-top: 200px;
+}

@@ -29,10 +29,11 @@
         </div> -->
         <!-- {{product.description}} -->
     </div>
-    <div class="product-price" [innerHTML]="product.price"></div>
+    <div class="product-price">{{product.price}}$</div>
     <div class="">
         <div class="button-form">
-            <button mat-raised-button type="submit" class="buy" color="primary">Купить</button>
+            <button mat-raised-button [routerLink]="['/cart']" type="submit" class="buy" color="primary"
+                (click)="addProduct(product)">Купить</button>
             <button mat-raised-button type="submit" class="open" color="primary"
                 [routerLink]="['/product-info', product.id]">Открыть</button>
         </div>

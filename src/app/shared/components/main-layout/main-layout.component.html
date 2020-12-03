@@ -1,5 +1,5 @@
 <div class="header">
-    <div class="logo"><a href="">YourTech</a></div>
+    <div class="logo"><a href="">YourTech</a><a [routerLink]="['cart']" (click)="setType('Cart')">Корзина</a></div>
 </div>
 <div class="content-wrap">
     <div class="menu">
@@ -20,9 +20,6 @@
             </li>
             <li routerLinkActive="active">
                 <div class="light"></div><a [routerLink]="['game']" (click)="setType('Games')">Игры</a>
-            </li>
-            <li routerLinkActive="active">
-                <div class="light"></div><a [routerLink]="['cart']" (click)="setType('Cart')">Корзина</a>
             </li>
         </ul>
     </div>

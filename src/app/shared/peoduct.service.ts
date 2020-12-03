@@ -12,6 +12,7 @@ import { map } from 'rxjs/internal/operators';
 export class ProductService {
 
     type = ''
+    cartProducts: Product[] = []
 
     constructor(private http: HttpClient, public router: Router) {}
 
@@ -59,6 +60,10 @@ export class ProductService {
     }
     setType(type) {
         this.type = type
+    }
+
+    addProduct(product) {
+        this.cartProducts.push(product)
     }
 }
 
