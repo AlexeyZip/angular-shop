@@ -15,7 +15,7 @@ const routes: Routes = [
     path: '',
     component: MainLayoutComponent,
     children: [
-      { path: '', redirectTo: '/', pathMatch: 'full' },
+      { path: '', redirectTo: 'phones', pathMatch: 'full' },
       { path: 'phones', component: PhonesPageComponent },
       { path: 'tablet', component: TablePageComponent },
       { path: 'laptop', component: LaptopPageComponent },

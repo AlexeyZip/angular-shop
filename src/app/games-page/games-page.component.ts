@@ -16,5 +16,6 @@ export class GamesPageComponent implements OnInit {
 
   ngOnInit() {
     this.products$ = this.productService.getAll()
+    return this.productService.setType('Games')
   }
 }

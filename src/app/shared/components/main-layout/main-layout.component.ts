@@ -9,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./main-layout.component.scss'],
 })
 export class MainLayoutComponent implements OnInit {
-  type = ''
+  type = 'Phone'
 
   constructor(public router: Router, private productService: ProductService) {}
 
@@ -20,16 +20,6 @@ export class MainLayoutComponent implements OnInit {
 
   setType(type) {
     this.type = type
-    // if(this.type !=='Cart') {
-    //   this.router.navigate([''], {
-      
-    //   })
-    //   this.productService.setType(this.type)
-    // }
-    // if (this.type == 'Phone') {
-    //    this.router.navigate(['phones'], )
-    //   this.productService.setType('Phone')
-    // }
    
     this.productService.setType(this.type)
   }

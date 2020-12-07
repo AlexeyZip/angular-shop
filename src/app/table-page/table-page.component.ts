@@ -16,6 +16,7 @@ export class TablePageComponent implements OnInit {
 
   ngOnInit() {
     this.products$ = this.productService.getAll()
+    return this.productService.setType('Tablet')
   }
 
 
