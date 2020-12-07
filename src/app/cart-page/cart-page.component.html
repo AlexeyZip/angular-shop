@@ -47,7 +47,7 @@
         <div class="cart-title">
             <h2>Доставка:</h2>
         </div>
-
+        <div class="added" *ngIf="added">{{added}}</div>
         <form [formGroup]="form" (ngSubmit)="submit()">
 
 

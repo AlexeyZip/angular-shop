@@ -30,6 +30,7 @@ export class MainLayoutComponent implements OnInit {
     //    this.router.navigate(['phones'], )
     //   this.productService.setType('Phone')
     // }
+   
     this.productService.setType(this.type)
   }
 }

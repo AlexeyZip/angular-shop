@@ -16,6 +16,7 @@ export class CartPageComponent implements OnInit {
   cartProducts = [];
   totalPrice = 0;
   submitted: boolean;
+  added = ''
   constructor(private productService: ProductService, private orderService: OrderService,) { }
   // private alert: AlertService
   ngOnInit(): void {
@@ -62,7 +63,7 @@ export class CartPageComponent implements OnInit {
     this.orderService.create(order).subscribe(() => {
       this.form.reset()
       this.submitted = false;
-      // this.alert.success('Заказ был успешно создан')
+      this.added = 'Ваш заказ был успешно оформлен и находится в обработке'
     })
    
   }
