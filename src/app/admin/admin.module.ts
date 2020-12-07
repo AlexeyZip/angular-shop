@@ -13,6 +13,7 @@ import { DashboardPageComponent } from './dashboard-page/dashboard-page.componen
 import { CreatePageComponent } from './create-page/create-page.component';
 import { EditPageComponent } from './edit-page/edit-page.component';
 import { AlertComponent } from './shared/component/alert/alert.component';
+import { OrdersPageComponent } from './orders-page/orders-page.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { AlertComponent } from './shared/component/alert/alert.component';
     LoginPageComponent,
     SearchPipe,
     AlertComponent,
+    OrdersPageComponent,
   ],
   imports: [
     CommonModule,
@@ -38,6 +40,7 @@ import { AlertComponent } from './shared/component/alert/alert.component';
           { path: '', redirectTo: '/admin/login', pathMatch: 'full' },
           { path: 'login', component: LoginPageComponent },
           {path: 'create', component: CreatePageComponent,canActivate: [AuthGuard],},
+          {path: 'orders', component: OrdersPageComponent,canActivate: [AuthGuard],},
           {path: 'dashboard',component: DashboardPageComponent,canActivate: [AuthGuard],},
           {path: 'phone/:id/edit',component: EditPageComponent,canActivate: [AuthGuard],},
           // {path: 'phone/:id/edit',component: EditPageComponent,canActivate: [AuthGuard],},

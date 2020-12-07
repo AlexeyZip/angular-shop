@@ -27,23 +27,23 @@ export class OrderService {
         }))
     }
 
-    // getAll(): Observable<Product[]> {
-    //     return this.http.get(`${environment.fbDbUrl}/products.json`)
-    //     .pipe(map((response: {[key: string]: any}) => {
-    //         return Object
-    //         .keys(response)
-    //         .map(key => ({
-    //             ...response[key],
-    //             id: key,
-    //             date: new Date(response[key].date),
-    //         }))
-    //     }))
-    // }
+    getAll(): Observable<Order[]> {
+        return this.http.get(`${environment.fbDbUrl}/orders.json`)
+        .pipe(map((response: {[key: string]: any}) => {
+            return Object
+            .keys(response)
+            .map(key => ({
+                ...response[key],
+                id: key,
+                date: new Date(response[key].date),
+            }))
+        }))
+    }
 
 
-    // remove(id: string): Observable<void> {
-    //     return this.http.delete<void>(`${environment.fbDbUrl}/products/${id}.json`)
-    // }
+    remove(id: string): Observable<void> {
+        return this.http.delete<void>(`${environment.fbDbUrl}/orders/${id}.json`)
+    }
 
 
 }

@@ -3,6 +3,7 @@ import { OrderService } from './../shared/order.service';
 import { ProductService } from './../shared/peoduct.service';
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+// import { AlertService } from '../admin/shared/services/alert.services';
 
 @Component({
   selector: 'app-cart-page',
@@ -15,8 +16,8 @@ export class CartPageComponent implements OnInit {
   cartProducts = [];
   totalPrice = 0;
   submitted: boolean;
-  constructor(private productService: ProductService, private orderService: OrderService) { }
-
+  constructor(private productService: ProductService, private orderService: OrderService,) { }
+  // private alert: AlertService
   ngOnInit(): void {
     this.cartProducts = this.productService.cartProducts
     for (let i = 0; i < this.cartProducts.length; i++) {
@@ -61,6 +62,7 @@ export class CartPageComponent implements OnInit {
     this.orderService.create(order).subscribe(() => {
       this.form.reset()
       this.submitted = false;
+      // this.alert.success('Заказ был успешно создан')
     })
    
   }

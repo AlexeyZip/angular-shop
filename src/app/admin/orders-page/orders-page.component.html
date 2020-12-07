@@ -1,0 +1,47 @@
+<div class="" *ngIf="orders.length; else noOrders">
+    <div class="title">
+        <h2>Таблица заказов</h2>
+    </div>
+
+
+    <table>
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Дата</th>
+                <th>Телефон</th>
+                <th>Имя</th>
+                <th>Адрес</th>
+                <th>Продукты</th>
+                <th>Цена</th>
+                <th>Способ оплаты</th>
+                <th>Статус заказа</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let order of orders; let idx = index">
+                <td>{{idx + 1}}</td>
+                <td>{{order.date | date:'medium':null: 'ru'}}</td>
+                <td>{{order.phone}}</td>
+                <td>{{order.name}}</td>
+                <td>{{order.address}}</td>
+                <td>
+                    <div *ngFor="let product of order.orders">{{product.name}}</div>
+                </td>
+                <td>{{order.price}}$</td>
+                <td>
+                    {{order.payment}}
+                </td>
+                <td>
+                    <div class="form-btn">
+                        <button mat-button color="primary" class="remove-btn"><a
+                                (click)="remove(order.id)">Завершить</a>
+                        </button></div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<ng-template #noOrders>
+    <p>На данный момент заказов нет</p>
+</ng-template>

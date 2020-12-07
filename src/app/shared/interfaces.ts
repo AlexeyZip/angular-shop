@@ -20,6 +20,7 @@ export interface Product {
 }
 
 export interface Order {
+  id?: string;
   phone: string;
   name: string;
   address: string;

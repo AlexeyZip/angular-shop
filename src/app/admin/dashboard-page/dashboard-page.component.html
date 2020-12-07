@@ -1,4 +1,7 @@
 <div class="" *ngIf="products.length; else loading">
+    <div class="title">
+        <h2>Таблица товаров</h2>
+    </div>
     <form>
         <mat-form-field appearance="outline" class="custom-input">
             <mat-label>Найти</mat-label>
@@ -6,7 +9,6 @@
 
         </mat-form-field>
     </form>
-
 
     <!-- <input type="text" placeholder="Find task" [(ngModel)]="searchStr"> -->
     <table>
