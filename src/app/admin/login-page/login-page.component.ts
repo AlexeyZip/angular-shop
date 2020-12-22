@@ -1,3 +1,4 @@
+import { MyValidators } from './my.validators';
 import { ActivatedRoute, Params, Router } from '@angular/router';
 import { AuthService } from './../shared/services/auth.service';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
@@ -25,7 +26,7 @@ export class LoginPageComponent implements OnInit {
     })
 
     this.form = new FormGroup({
-      email: new FormControl(null, [Validators.required, Validators.email]),
+      email: new FormControl(null, [Validators.required, Validators.email, MyValidators.restrictedEmails]),
       password: new FormControl(null, [
         Validators.required,
         Validators.minLength(6),

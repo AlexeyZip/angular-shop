@@ -11,10 +11,10 @@
         <mat-form-field appearance="outline" class="custom-input">
             <mat-label>Email</mat-label>
             <input matInput formControlName="email" placeholder="Ex. pat@example.com" autocomplete="email">
-            <mat-error class="error" id="invalidEmailError">
+            <mat-error *ngIf="form.controls['email'].hasError('email')" class="error" id="invalidEmailError">
                 Please enter a valid email address
             </mat-error>
-            <mat-error class="error" id="requiredEmailError">
+            <mat-error *ngIf="form.controls['email'].hasError('required')" class="error" id="requiredEmailError">
                 Email is
                 <strong>required</strong>
             </mat-error>
@@ -24,9 +24,12 @@
             <mat-label>Password</mat-label>
             <input matInput formControlName="password" placeholder="Ex. pat@example.com"
                 autocomplete="current-password">
-            <mat-error class="error" id="requiredPasswordError">
-                Password is
-                <strong>required</strong>
+            <mat-error *ngIf="form.controls['password'].hasError('required')" class="error" id="requiredPasswordError">
+                Enter
+                <strong>password</strong>
+            </mat-error>
+            <mat-error *ngIf="form.controls['password'].hasError" class="error">
+                Password must be contain min 6 symbols
             </mat-error>
         </mat-form-field>
     </div>
