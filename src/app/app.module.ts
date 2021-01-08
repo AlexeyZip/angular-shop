@@ -1,3 +1,4 @@
+import { ShoppingCartComponent } from './shared/components/main-layout/cart-counter';
 import { SortingPipe } from './shared/sorting.pipe';
 import { AuthInterceptor } from './shared/auth.interceptor';
 // import { AuthService } from './admin/shared/services/auth.service';
@@ -43,6 +44,7 @@ const INTERCEPTOR_PROVIDER: Provider = {
     PhonePageComponent,
     SortingPipe,
     PhoneInfoComponent,
+    ShoppingCartComponent,
     CartPageComponent,
     HomeAppliancesComponent,
   ],
